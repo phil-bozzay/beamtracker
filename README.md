@@ -1,32 +1,41 @@
 ## Members
-Henry Forsyth, Computer Engineering Student (2024)
-rhforsythjr@vt.edu
-
+Phillip Bozzay, Applied Electromagnetics (2026)
+phillipb23@vt.edu
+LinkedIn: https://www.linkedin.com/in/phillip-bozzay-830699220/
 ## Mentor
-MENTOR NAME HERE
-
+Shane Wynman, Aleks Salvetti 
 ## Current Status
 IN PROGRESS
 
 ## Project Overview
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula, odio eu dictum aliquet, enim elit tempor diam, quis volutpat mi eros ut nisi. Aliquam luctus orci eget accumsan porta. Proin sollicitudin ultricies lacus et varius. Pellentesque tempor vehicula tempus. Integer semper id lorem vehicula tristique. Suspendisse nec placerat libero, eget aliquet eros. Phasellus iaculis quis lorem in ultrices. Nunc lobortis odio at sem pretium dictum. Integer sed tellus quis lorem pretium posuere.
+This project develops a software-defined phased array receiver to digitally steer and track RF signals at 915 MHz — the same fundamental technology that enables satellite communication systems like Starlink to maintain connectivity with thousands of moving user terminals. Starting from a single custom receive chain and scaling to a four-element array, the system demonstrates end-to-end RF hardware design, FPGA-based data acquisition, and real-time digital beamforming in GNU Radio. Each stage of the receiver — LNA, filtering, downconversion, digitization, and processing — is designed from first principles using off-the-shelf components on a custom PCB. The result is a fully functional phased array platform for experimentation in beam steering, interference nulling, and direction finding.
 
 ## Educational Value Added
 
-Vivamus dapibus iaculis dui. Nullam vitae arcu a nisi elementum semper eu eu velit. Suspendisse vel dictum lacus. Sed facilisis luctus consequat. Donec vulputate eu dolor in molestie. Maecenas pretium sem non tellus facilisis sollicitudin id ut nulla. In condimentum orci nisi, sagittis facilisis neque convallis eget. Duis ut sem cursus, placerat mi pellentesque, mollis eros. Integer efficitur blandit elit, sed egestas sem porta in. Mauris euismod nulla ac tellus tempus, eu egestas dui molestie. Proin faucibus enim quis consequat sodales. Pellentesque eleifend blandit augue et laoreet. Phasellus vel posuere nisi, ac aliquam arcu.
+
 
 ## Tasks
-
-<!-- Your Text Here. You may work with your mentor on this later when they are assigned -->
-
+1. Define system requirements: frequency, bandwidth, IF, ADC sample rate, beamforming specifications
+2. Select and procure components: LNA, SAW filter, mixer, PLL/LO, ADC, FPGA dev board, antennas
+3.Design single-channel receiver schematic in KiCad with reference design validation
+4. Simulate RF front end performance: noise figure cascade, gain budget, image rejectio
+5. Layout single-channel PCB with controlled impedance traces and proper RF grounding
+6. Fabricate, assemble, and bring up single-channel board
+7. Validate RF performance: verify gain, noise figure, and IF output with spectrum analyzer
+8. Interface ADC to FPGA: write VHDL/Verilog for single-channel data capture and USB serialization
+9. Stream data into GNU Radio and demodulate BPSK test signal end-to-end
+10. Design and fabricate four-channel receiver board with matched RF paths and shared LO distribution
+11. Extend FPGA firmware for four-channel parallel acquisition and serialization
+12. Implement digital beamforming in GNU Radio: phase weighting, beam steering, and pattern visualization
+13. Calibrate array channels to correct phase and amplitude mismatches
+14. Demonstrate beam steering, interference nulling, and direction finding with live RF signals
 ## Design Decisions
-
-<!-- Your Text Here. You may work with your mentor on this later when they are assigned -->
+Bandwidth: 
 
 ## Design Misc
+<img width="1858" height="1286" alt="image" src="https://github.com/user-attachments/assets/27bf59b7-99a2-4f99-8aa4-91c82f5fdb6f" />
 
-<!-- Your Text Here. You may work with your mentor on this later when they are assigned -->
 
 ## Steps for Documenting Your Design Process
 
@@ -47,3 +56,4 @@ Vivamus dapibus iaculis dui. Nullam vitae arcu a nisi elementum semper eu eu vel
 ## Log
 
 <!-- Your Text Here. You may work with your mentor on this later when they are assigned -->
+
