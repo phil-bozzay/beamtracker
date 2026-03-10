@@ -31,7 +31,7 @@ This project develops a software-defined phased array receiver to digitally stee
 13. Calibrate array channels to correct phase and amplitude mismatches
 14. Demonstrate beam steering, interference nulling, and direction finding with live RF signals
 ## Design Decisions
-Bandwidth: 
+**Signal Bandwidth** - Want minimum possible signal bandwidth, which is 500KHz defined by FCC guidelines 
 
 ## Design Misc
 <img width="1858" height="1286" alt="image" src="https://github.com/user-attachments/assets/27bf59b7-99a2-4f99-8aa4-91c82f5fdb6f" />
@@ -56,4 +56,5 @@ Bandwidth:
 ## Log
 
 <!-- Your Text Here. You may work with your mentor on this later when they are assigned -->
+
 
