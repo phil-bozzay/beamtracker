@@ -25,7 +25,15 @@ This project develops a software-defined phased array receiver to digitally stee
 - Im gonna go with a an analog beamforming architecture with one ADC
 - For first prototpye will use SMA-Monopoles for basic beamforming 
 - 4-bit phase shifters to steer
-- Raspberry pi pico to drive everything else 
+- Raspberry pi pico to drive everything else
+
+I will bandpass sample the IF frequency as i do not want to go directly to baseband 
+I do not want to deal with: 
+- LO leakage
+- DC offset
+- I/Q imbalance
+- 1/f noise
+
 <img width="2592" height="1002" alt="image" src="https://github.com/user-attachments/assets/e0bd105a-a4d1-4975-bcde-bfe5517c9379" />
 
 
@@ -52,9 +60,14 @@ Oscilloscope for digital/IF debugging
 
 
 ## Design Misc
-<img width="1858" height="1286" alt="image" src="https://github.com/user-attachments/assets/27bf59b7-99a2-4f99-8aa4-91c82f5fdb6f" />
-<img width="2006" height="622" alt="image" src="https://github.com/user-attachments/assets/4b0d2cbc-52b4-4181-aa58-6801e5ac96e6" />
-
+<img width="1638" height="670" alt="image" src="https://github.com/user-attachments/assets/0bccc948-6fa8-4579-98d2-e40d0dc9f17e" />
+- antenna: patch 
+- LNA Transistor: BFP 420 
+- Phase shifters: MAPS-010144 (covers 2.3-3.8GHz)
+- Mixer: ADE-25MH+ (5MHZ-2.5GHZ 8SMD)
+- Local oscillator: ADF4351
+- RF Splitter: PD2425J5050S2HF or SCG-3-272+
+- Pi Pico: SC0915
 
 ## Steps for Documenting Your Design Process
 
